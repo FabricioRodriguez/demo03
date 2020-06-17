@@ -4,6 +4,8 @@ from flask_wtf import FlaskForm
 from wtforms.fields import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired
 
+import unittest
+
 app = Flask(__name__)
 Bootstrap = Bootstrap(app)
 app.config['SECRET_KEY'] = 'SUPER SECRETO'
@@ -14,6 +16,11 @@ class LoginForm(FlaskForm):
     submit = SubmitField('Enviar')
 
 todos = ['Estudiar pipenv', 'Practicar behave', 'Implementar excepciones']
+
+@app.cli.command()
+def test():
+    test = unittest.TestLoader().discover('test')
+    unittest.TextTestRunner().run(test)
 
 @app.errorhandler(404)
 def not_found(error):

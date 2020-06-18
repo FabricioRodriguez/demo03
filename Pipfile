@@ -14,7 +14,8 @@ MarkupSafe = "==1.1.1"
 Werkzeug = "==0.15.3"
 Flask-Bootstrap = "==3.3.7.1"
 Flask-WTF = "==0.14.2"
-flask-testing = "==0.7.1"
+blinker = "==1.4"
+Flask-Testing = "==0.7.1"
 
 [requires]
 python_version = "3.5"

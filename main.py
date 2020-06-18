@@ -1,19 +1,11 @@
-from flask import Flask, request, make_response, redirect, render_template, session, url_for,flash
-from flask_bootstrap import Bootstrap
-from flask_wtf import FlaskForm
-from wtforms.fields import StringField, PasswordField, SubmitField
-from wtforms.validators import DataRequired
+from flask import request, make_response, redirect, render_template, session, url_for,flash
 
 import unittest
 
-app = Flask(__name__)
-Bootstrap = Bootstrap(app)
-app.config['SECRET_KEY'] = 'SUPER SECRETO'
+from app import create_app
+from app.forms import LoginForm
 
-class LoginForm(FlaskForm):
-    username = StringField('Nombre de usuario', validators=[DataRequired()])
-    passwoed = PasswordField('Password', validators=[DataRequired()])
-    submit = SubmitField('Enviar')
+app = create_app()
 
 todos = ['Estudiar pipenv', 'Practicar behave', 'Implementar excepciones']
 

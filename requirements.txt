@@ -8,3 +8,4 @@ flask-bootstrap==3.3.7.1
 flask-wtf==0.14.2
 flask-testing==0.7.1
 blinker==1.4
+firebase-admin

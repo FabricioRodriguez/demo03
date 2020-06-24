@@ -17,6 +17,7 @@ Flask-WTF = "==0.14.2"
 blinker = "==1.4"
 Flask-Testing = "==0.7.1"
 firebase-admin = "*"
+Flask-Login = "==0.4.1"
 
 [requires]
 python_version = "3.5"
